@@ -19,7 +19,7 @@ class Simulation:
 
 	def run(self):
 		for p in self.particles:
-			print(p.velocity.magnitude())
+			print(p.velocity)
 
 
 
