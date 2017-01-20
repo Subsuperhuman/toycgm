@@ -33,7 +33,7 @@ class f2:
 		""" vector addition """
 		return f2(self.x+other.x,self.y+other.y)
 
-	def __add__(self,other):
+	def __sub__(self,other):
 		""" vector subtraction """
 		return f2(self.x-other.x,self.y-other.y)
 
@@ -47,6 +47,14 @@ class f2:
 	def __rmul__(self,other):
 		""" for prefixed multiplications """
 		return self.__mul__(other)
+
+	def __div__(self,other):
+		"""division overload for vectors and floats"""
+		return f2(self.x/float(other),self.y/float(other))
+
+	def __pow__(self,other):
+		"""power overload for vectors"""
+		return self.x**other+self.y**other
 
 	def __repr__(self):
 		""" for the interactive console or reflection debugging """
